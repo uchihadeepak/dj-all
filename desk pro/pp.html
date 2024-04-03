@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Ad In Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins',sans-serif;
+        }
+        .con{
+            display: flex;
+            width: 100%;
+            height:100vh;
+            align-items: center;
+            justify-content: center;
+            background: rgb(38, 151, 151);
+        }
+        .con button{
+            padding: 10px 60px;
+            font-size: 25px;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .over{
+            position: absolute;
+            background: white;
+            top: 5%;
+            left: 40%;
+            padding: 50px 80px;
+            text-align: center;
+            border: none;
+            border-radius: 10px;
+            display: none;
+            transition: 0.5s;
+        }
+        .over h2{
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .over h5{
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        .over button{
+            margin-top: 20px;
+            margin-bottom: 0;
+            padding: 10px 60px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            background-color: greenyellow;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <button type="submit" onclick="show()">Submit</button>
+    </div>
+    <div class="over">
+        <h2>Thank You !</h2>
+        <h5>Sucessfully Register</h5>
+        <button onclick="ok()">OK</button>
+    </div>
+    <script>
+        var overr=document.querySelector(".over")
+        function show(){
+            overr.style.display="block"
+        }
+        function ok(){
+        overr.style.display="none"
+        }
+    </script>
+</body>
+</html>

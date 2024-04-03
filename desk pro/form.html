@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Sending</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(213, 208, 208);
+}
+.con{
+    width: 420px;
+    border-radius: 20px;
+    background: rgb(54, 166, 166);
+    padding: 40px;
+}
+.con .main{
+    width: 100%;
+    height: 50px;
+    margin: 50px 0;
+}
+.con .main input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border: 2px solid #f1ecec;
+    background: transparent;
+    border-radius: 20px;
+}
+.con .main input::placeholder{
+    color: #fff;
+}
+.con button{
+    width: 100%;
+    padding: 20px;
+    height: 50px;
+    font-weight: 600;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="con">
+        <form>
+            <div class="main">
+                <input type="text" name="name" required placeholder="Name">
+            </div>
+            <div class="main">
+                <input type="email" name="email" required placeholder="E-mail">
+            </div>
+            <div class="main">
+                <input type="text" name="subject" required placeholder="Subject">
+            </div>
+            <div class="main">
+                <input type="text" name="message" required placeholder="Message">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+</body>
+</html>

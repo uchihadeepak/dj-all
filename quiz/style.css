@@ -1,0 +1,26 @@
+body{
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+.container{
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+.qus{
+    margin-bottom: 10px;
+}
+.op{
+    margin-left: 20px;
+}
+.btn{
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    background-color: #4caf50;
+}

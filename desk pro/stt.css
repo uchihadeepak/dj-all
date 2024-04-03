@@ -1,0 +1,77 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'poppins',sans-serif;
+}
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	background: url("peakpx.jpg") no-repeat;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	background-position: center;
+	background-size: cover;
+	min-height: 100vh;
+}
+.div{
+	width: 420px;
+	box-shadow: 0px 0px 10px rgb(0,0,0,0.5);
+	color: #fff;
+	backdrop-filter: blur(10px);
+	background: transparent;
+	padding: 20px 40px;
+	border-radius: 10px;
+}
+.div h1{
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.div .main{
+	height: 50px;
+	margin: 20px 0;
+	width: 100%;
+}
+
+.div .main input{
+	width: 100%;
+	background: transparent;
+	border: none;
+	border:2px solid rgb(225,225,225,0.2);
+	color: white;
+	border-radius: 50px;
+	outline: none;
+	height: 100%;
+	padding:20px 45px 20px 20px;
+}
+
+.main input::placeholder{
+	color:#fff;
+	}
+
+.div .btn{
+	width: 100%;
+	border-radius: 50px;
+	outline: none;
+	border: none;
+	text-shadow: 2px 2px 10px rgb(0,0,0,0.5);
+	height: 50px;
+	color: black;
+	font-weight: 600;
+	background: white;
+	cursor: pointer;
+}
+.div .rel{
+	margin-top: 20px;
+	text-align: center;
+}
+.div .rel a{
+	text-decoration: none;
+	color: #fff;
+}
+.div .rel a:hover{
+	text-decoration: underline;
+}

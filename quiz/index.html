@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="qus">
+            <p>1. What is the captial of france ?</p>
+            <div class="op">
+                <input type="radio" name="q1" value="paris">Paris
+                <input type="radio" name="q1" value="berlin">Berlin
+                <input type="radio" name="q1" value="london">London
+            </div>
+        </div>
+        <div class="qus">
+            <p>2. Which is the red planet ?</p>
+            <div class="op">
+                <input type="radio" name="q2" value="mars">Mars
+                <input type="radio" name="q2" value="venus">Venus
+                <input type="radio" name="q2" value="jupiter">Jupiter
+            </div>
+        </div>
+        <div class="qus">
+            <p>3. What is the largest mammal in the world ?</p>
+            <div class="op">
+                <input type="radio" name="q3" value="bluewhale">Blue Whale
+                <input type="radio" name="q3" value="rat">Rat
+                <input type="radio" name="q3" value="lion">Lion
+            </div>
+        </div>
+        <button class="btn" onclick="quiz()">Submit Answers</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function quiz()
+        {
+            var score= 0;
+            if(document.querySelector("input[name=q1]:checked").value==='paris'){
+                score++;
+            }
+            if(document.querySelector("input[name=q2]:checked").value==='mars'){
+                score++;
+            }
+            if(document.querySelector("input[name=q3]:checked").value==='bluewhale'){
+                score++;
+            }
+            document.getElementById('result').innerHTML = 'Your Score :'+score+'/3';
+        }
+    </script>
+</body>
+</html>

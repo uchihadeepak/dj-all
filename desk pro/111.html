@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Button</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            padding: 10px 15px;
+            display: block;
+            margin: 10px 0;
+            border: none;
+            outline: none;
+            border: 2px solid rgb(0,0,0,0.5);
+            border-radius: 10px;
+        }
+        button{
+            margin: 10px 0;
+            padding: 5px 30px;
+            cursor: pointer;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            border: 2px solid rgb(0,0,0,0.5);
+        }
+        p{
+            color: red;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        div{
+            background-color: aqua;
+            padding: 20px 40px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button onclick="val()">Add</button>
+    <p id="res">Result</p>
+</div>
+</center>
+    <script>
+        var box1=document.getElementById("num1")
+        var box2=document.getElementById("num2")
+        var Result=document.getElementById("res")
+        function val()
+        {
+            var box1val=Number(box1.value)
+            var box2val=Number(box2.value)
+            var total=box1val+box2val
+            Result.textContent=total
+        }
+    </script>
+    
+</body>
+</html>

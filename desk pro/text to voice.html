@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text To Speech</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg,#010758,#490d61);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.hero h1{
+    font-size: 45px;
+    font-weight: 500;
+    margin-top: -50px;
+    margin-bottom: 50px;
+}
+.hero span{
+    color: #ff2963;
+}
+.hero textarea{
+    width: 600px;
+    height: 250px;
+    background: #403d84;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 10px;
+    resize: none;
+    margin-bottom: 30px;
+}
+textarea::placeholder{
+    color: #ddd;
+    font-size: 16px;
+}
+row{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+button{
+    background: #ff2963;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 35px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Text To Speech <span>Converter</span></h1>
+        <textarea placeholder="Type Here Any..."></textarea>
+        <div class="row">
+            <button>Listen</button>
+        </div>
+    </div>
+    
+
+    <script>
+        let speech = new SpeechSynthesisUtterance();
+
+document.querySelector("button").addEventListener("click",() =>{
+    speech.text=document.querySelector("textarea").value;
+    window.speechSynthesis.speak(speech);
+    
+})
+    </script>
+</body>
+</html>
